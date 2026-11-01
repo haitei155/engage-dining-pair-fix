@@ -12,7 +12,7 @@ The current binary targets Fire Emblem Engage 2.0.0 with Cobalt 1.31.0 as its co
 
 **[Download the complete v0.3 package: engage_custom_unit_support.zip](https://github.com/haitei155/engage-custom-unit-support/releases/download/v0.3/engage_custom_unit_support.zip)** · [Release page](https://github.com/haitei155/engage-custom-unit-support/releases/tag/v0.3) · [SHA256SUMS](https://github.com/haitei155/engage-custom-unit-support/releases/download/v0.3/SHA256SUMS)
 
-The complete ZIP contains `engage_custom_unit_support.nro` and three UI resource files: `godinfo.bundle`, `unitselectroot.bundle` and `skillselectroot.bundle`. No separate downloads are needed. A Bundle packages game UI controls and layout: the NRO provides plugin logic, while the three Bundles provide the expanded skill-inheritance UI. **Installing or replacing only the NRO does not provide the v0.3 UI capacity expansion.**
+The complete ZIP contains `engage_custom_unit_support.nro` and three UI resource files: `godinfo.bundle`, `unitselectroot.bundle` and `skillselectroot.bundle`. No separate downloads are needed. The Bundles extend the original interface with expanded controls and layouts. They work alongside the NRO, which provides the plugin logic. **Installing or replacing only the NRO does not provide the v0.3 UI capacity expansion.**
 
 1. Install the prerequisite runtime following [Cobalt](https://github.com/Raytwo/Cobalt)'s instructions, then fully exit the game.
 2. Choose one method: place the complete ZIP unchanged in `engage/mods/`, or extract all its contents into `engage/mods/engage-custom-unit-support/`, preserving the internal `Data/` directory structure. Do not install both the ZIP and an extracted copy.
@@ -33,8 +33,6 @@ engage/mods/engage-custom-unit-support/
 
 The separate NRO on the Release page contains only the plugin program and does not replace the complete installation package. Six-frame Loading PNGs are supplied separately by character packages; they are not part of these three UI Bundles. See below for their format and filenames.
 
-UI resource rights are separate from the plugin code license; see License and Credits below.
-
 ## New in v0.3
 
 ### Expanded skill-inheritance lists
@@ -45,7 +43,9 @@ v0.3 expands the bond-level panel to **22 entries in two columns and 11 rows**, 
 
 The inheritance details provide **30 navigation slots**. Native sorting, left/right navigation and wraparound remain in use. The indicator row scales to two thirds of its original size to accommodate 30 slots. Lists beyond 30 require further UI resource expansion. Only owned emblems appear; the plugin does not grant rings, skills or bond levels.
 
-Install the NRO and all three UI resource files from the complete package; see Download and Installation above for filenames and paths. Controls are expanded in the resources and initialized by the native game flow; the NRO adds a navigation bounds guard. Fully restart the game after updating.
+Install the NRO and all three UI resource files from the complete package; see Download and Installation above for filenames and paths. Controls are expanded in the resources and initialized by the native flow; the NRO adds a navigation bounds guard. Fully restart the game after updating.
+
+**UI resource rights notice:** these three Bundles, including copies in the complete ZIP, are excluded from the plugin code's Apache-2.0 license. Their rights are described separately in the [UI resource rights notice](resources/inheritance/NOTICE.md).
 
 ## v0.2 Features
 

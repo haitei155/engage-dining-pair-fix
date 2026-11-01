@@ -12,7 +12,7 @@
 
 **[下载 v0.3 完整安装包：engage_custom_unit_support.zip](https://github.com/haitei155/engage-custom-unit-support/releases/download/v0.3/engage_custom_unit_support.zip)** · [发布页面](https://github.com/haitei155/engage-custom-unit-support/releases/tag/v0.3) · [SHA256SUMS](https://github.com/haitei155/engage-custom-unit-support/releases/download/v0.3/SHA256SUMS)
 
-完整 ZIP 已包含 `engage_custom_unit_support.nro` 和三个界面资源文件：`godinfo.bundle`、`unitselectroot.bundle`、`skillselectroot.bundle`，无需分别下载。这里的 Bundle 是游戏界面的资源包，包含控件及布局；NRO 负责插件逻辑，三个 Bundle 提供扩充后的特技继承界面。**仅安装或替换 NRO，无法获得 v0.3 的界面容量扩展。**
+完整 ZIP 已包含 `engage_custom_unit_support.nro` 和三个界面资源文件：`godinfo.bundle`、`unitselectroot.bundle`、`skillselectroot.bundle`，无需分别下载。Bundle 是原始界面的扩展资源包，包含扩充后的控件及布局，与负责插件逻辑的 NRO 配合使用。**仅安装或替换 NRO，无法获得 v0.3 的界面容量扩展。**
 
 1. 先按 [Cobalt](https://github.com/Raytwo/Cobalt) 的说明安装基础运行环境，然后完全退出游戏。
 2. 选择一种安装方式：将完整 ZIP 原样放入 `engage/mods/`；或将 ZIP 内的全部内容解压至 `engage/mods/engage-custom-unit-support/`，保留内部 `Data/` 目录结构。不要同时安装 ZIP 和解压副本。
@@ -33,8 +33,6 @@ engage/mods/engage-custom-unit-support/
 
 Release 中的单独 NRO 只包含插件程序，不能代替完整安装包。Loading 小人的六帧 PNG 由对应人物包另行提供，不包含在上述三个界面 Bundle 中，制作与命名方法见下文。
 
-界面资源的许可范围与插件代码分开，见下方“许可与致谢”。
-
 ## v0.3 新增内容
 
 ### 特技继承列表扩展
@@ -45,7 +43,9 @@ v0.3 将右侧牵绊面板扩为 **22 项，两列、11 行**，同时补足背�
 
 继承详情页预置 **30 个导航槽**，保留原生排序、左右切换和首尾循环；圆点行缩小至原来的三分之二，以容纳 30 个槽。超过 30 项时需继续扩展界面资源。仅显示实际持有的纹章士，不会额外获得戒指、技能或牵绊等级。
 
-本功能需要完整安装包中的 NRO 和三个界面资源文件，具体文件名与目录见上方“下载与安装”。控件在资源中预先扩好，进入页面时由游戏原生流程初始化；NRO 为导航增加越界保护。更新后须完整重启游戏。
+本功能需要完整安装包中的 NRO 和三个界面资源文件，具体文件名与目录见上方“下载与安装”。控件在资源中预先扩好，进入页面时由原生流程初始化；NRO 为导航增加越界保护。更新后须完整重启游戏。
+
+**界面资源权利声明：**这三个 Bundle（含完整 ZIP 内的副本）不适用插件代码的 Apache-2.0 许可，其权利范围单独说明，见[界面资源权利声明](resources/inheritance/NOTICE.md)。
 
 ## v0.2 功能
 
