@@ -8,6 +8,33 @@
 
 The current binary targets Fire Emblem Engage 2.0.0 with Cobalt 1.31.0 as its compatibility baseline.
 
+## Download and Installation
+
+**[Download the complete v0.3 package: engage_custom_unit_support.zip](https://github.com/haitei155/engage-custom-unit-support/releases/download/v0.3/engage_custom_unit_support.zip)** · [Release page](https://github.com/haitei155/engage-custom-unit-support/releases/tag/v0.3) · [SHA256SUMS](https://github.com/haitei155/engage-custom-unit-support/releases/download/v0.3/SHA256SUMS)
+
+The complete ZIP contains `engage_custom_unit_support.nro` and three UI resource files: `godinfo.bundle`, `unitselectroot.bundle` and `skillselectroot.bundle`. No separate downloads are needed. A Bundle packages game UI controls and layout: the NRO provides plugin logic, while the three Bundles provide the expanded skill-inheritance UI. **Installing or replacing only the NRO does not provide the v0.3 UI capacity expansion.**
+
+1. Install the prerequisite runtime following [Cobalt](https://github.com/Raytwo/Cobalt)'s instructions, then fully exit the game.
+2. Choose one method: place the complete ZIP unchanged in `engage/mods/`, or extract all its contents into `engage/mods/engage-custom-unit-support/`, preserving the internal `Data/` directory structure. Do not install both the ZIP and an extracted copy.
+3. When upgrading, replace the complete plugin package. For an extracted installation, update both the NRO and the three Bundles under `Data/`. **Remove the old `engage_dining_pair_fix.nro`** to avoid duplicate hooks. If a mod collection already includes this plugin, use that copy without a separate installation.
+4. Fully restart the game. Emulators use their configured virtual SD card directory; returning to the title screen is not a full restart.
+
+An extracted installation has the following layout; with the ZIP method, these files remain inside the ZIP:
+
+```text
+engage/mods/engage-custom-unit-support/
+├─ engage_custom_unit_support.nro
+├─ Data/StreamingAssets/aa/Switch/fe_assets_ui/hub/godroom/prefabs/
+│  ├─ godinfo.bundle
+│  ├─ unitselectroot.bundle
+│  └─ skillselectroot.bundle
+└─ RELEASE_NOTES.md
+```
+
+The separate NRO on the Release page contains only the plugin program and does not replace the complete installation package. Six-frame Loading PNGs are supplied separately by character packages; they are not part of these three UI Bundles. See below for their format and filenames.
+
+**Resource licensing:** these three Bundles are modified Engage 2.0.0 game UI assets, not project code or documentation released under Apache-2.0. Rights to the original game assets remain with their respective holders; bundling them does not grant an open-source license to those assets. See the [build instructions](docs/BUILD.md) for the modification script and generation from your own RomFS, and [THIRD_PARTY.md](THIRD_PARTY.md) for provenance and license scope.
+
 ## New in v0.3
 
 ### Expanded skill-inheritance lists
@@ -18,7 +45,7 @@ v0.3 expands the bond-level panel to **22 entries in two columns and 11 rows**, 
 
 The inheritance details provide **30 navigation slots**. Native sorting, left/right navigation and wraparound remain in use. The indicator row scales to two thirds of its original size to accommodate 30 slots. Lists beyond 30 require further UI resource expansion. Only owned emblems appear; the plugin does not grant rings, skills or bond levels.
 
-Install both the NRO and the three companion UI Bundles. Controls are expanded in the resources and initialized by the native game flow; the NRO adds a navigation bounds guard. Fully restart the game after updating.
+Install the NRO and all three UI resource files from the complete package; see Download and Installation above for filenames and paths. Controls are expanded in the resources and initialized by the native game flow; the NRO adds a navigation bounds guard. Fully restart the game after updating.
 
 ## v0.2 Features
 
@@ -60,15 +87,6 @@ With the patch enabled, the following screenshots show this pair continuing into
 
 ![Eirika's meal-evaluation dialogue continues after the fix](images/paired-dining-dialogue-eirika.jpg)
 
-## Download and Installation
-
-v0.3 binary: [`engage_custom_unit_support.zip`](Releases/engage_custom_unit_support.zip); checksums: [SHA256SUMS](Releases/SHA256SUMS).
-
-1. Install the prerequisite runtime using Cobalt's instructions.
-2. Place the complete ZIP in `engage/mods/`, or extract its contents into `engage/mods/engage-custom-unit-support/`, and fully restart the game. Replacing only the NRO does not expand the UI capacity.
-3. **Remove the old `engage_dining_pair_fix.nro` when upgrading.** Old and new names contain the same dining hook and must not run together. If your mod collection already includes this plugin, use that copy without a separate installation.
-4. Keep Loading PNG resources in the corresponding character package; installing only the NRO does not add artwork.
-
 ## Upgrading from the previous project name
 
 Previously named `engage-dining-pair-fix`, this project is now `engage-custom-unit-support`. The v0.2 NRO is `engage_custom_unit_support.nro`. It includes the original dining fix; installing both NRO names creates duplicate hooks. Replace the old NRO when upgrading.
@@ -79,6 +97,6 @@ See [Build instructions](docs/BUILD.md). The source includes skill-inheritance l
 
 ## License and Credits
 
-Project-owned additions and documentation use the [Apache License 2.0](LICENSE). Third-party dependencies, upstream-derived code and resources retain their respective license terms and notices; see [THIRD_PARTY.md](THIRD_PARTY.md) and [NOTICE](NOTICE).
+Project-owned additions and documentation use the [Apache License 2.0](LICENSE). The modification script `tools/build_inheritance_ui.py` is project code; the three game UI Bundles it generates are outside Apache-2.0 and do not become open-source assets by being publicly downloadable. Third-party dependencies, upstream-derived code and resources retain their respective license terms and notices; see [THIRD_PARTY.md](THIRD_PARTY.md) and [NOTICE](NOTICE).
 
 Thanks to [Raytwo](https://github.com/Raytwo/Cobalt), [skyline-rs](https://github.com/skyline-rs) and all relevant dependency contributors.

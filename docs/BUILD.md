@@ -44,3 +44,7 @@ python tools/build_inheritance_ui.py --romfs "PATH/TO/RomFS"
 输出在 `resources/inheritance/Data/`，保留目录结构，与 NRO 一起打包。脚本校验原条目数量、未改对象字节、新对象类型和本地引用；生成资源沿用游戏资源的权利归属，不适用本项目代码许可。
 
 Output goes to `resources/inheritance/Data/`. Preserve this structure when packaging it with the NRO. The script validates original counts, unchanged object bytes, new object types and local references. Generated resources retain the game assets' rights and are outside the project code license.
+
+三个输出文件为 `godinfo.bundle`、`unitselectroot.bundle`、`skillselectroot.bundle`，都位于上述 `Data/StreamingAssets/aa/Switch/fe_assets_ui/hub/godroom/prefabs/` 下。本项目公开的是修改脚本；脚本需要读取你自己的 Engage 2.0.0 RomFS，不会下载原始游戏资源。生成文件包含原游戏对象，并非仅含修改内容的差分补丁；脚本的 Apache-2.0 许可不延伸至这些游戏资源，也不授予其分发许可。
+
+The outputs are `godinfo.bundle`, `unitselectroot.bundle` and `skillselectroot.bundle`, all under `Data/StreamingAssets/aa/Switch/fe_assets_ui/hub/godroom/prefabs/`. The published modification script requires your own Engage 2.0.0 RomFS and does not download original game assets. Its outputs contain original game objects, rather than only a delta patch. The script's Apache-2.0 license does not extend to those game assets or grant permission to distribute them.

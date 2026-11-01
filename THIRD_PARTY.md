@@ -25,3 +25,7 @@ Cargo.lock records other Cargo dependencies and their exact versions; their orig
 `resources/inheritance/Data/` 中的三个 Bundle 由 Engage 2.0.0 界面资源调整而来，使用 `tools/build_inheritance_ui.py` 生成。原始游戏资源的权利归原权利人，不适用本项目 Apache-2.0 许可。构建脚本使用 UnityPy（MIT），需单独安装。
 
 The three Bundles under `resources/inheritance/Data/` are modified Engage 2.0.0 UI assets generated with `tools/build_inheritance_ui.py`. Original game assets retain their rights and are outside the project Apache-2.0 license. The build script requires a separate installation of UnityPy (MIT).
+
+这三个文件分别为 `godinfo.bundle`、`unitselectroot.bundle` 和 `skillselectroot.bundle`，也包含在 `Releases/engage_custom_unit_support.zip` 的 `Data/` 目录中。它们包含修改后的游戏界面对象，并非只含本项目原创修改的差分补丁。公开修改脚本或附上本声明，不会授予原游戏资源的开源许可或分发授权；不能据此将整个 ZIP 标为 Apache-2.0。此处说明来源与许可边界，不构成已取得原权利人分发许可的声明。
+
+The files are `godinfo.bundle`, `unitselectroot.bundle` and `skillselectroot.bundle`, also included under `Data/` in `Releases/engage_custom_unit_support.zip`. They contain modified game UI objects, rather than only a delta of project-authored changes. Publishing the modification script or this notice does not grant an open-source license or distribution permission for the original game assets; the complete ZIP must not be treated as wholly Apache-2.0. This documents provenance and license scope, not a claim that distribution permission has been obtained from the original rights holders.

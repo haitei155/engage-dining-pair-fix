@@ -8,6 +8,33 @@
 
 当前编译版面向《火焰纹章 Engage》2.0.0，使用 Cobalt 1.31.0 作为兼容基线。
 
+## 下载与安装
+
+**[下载 v0.3 完整安装包：engage_custom_unit_support.zip](https://github.com/haitei155/engage-custom-unit-support/releases/download/v0.3/engage_custom_unit_support.zip)** · [发布页面](https://github.com/haitei155/engage-custom-unit-support/releases/tag/v0.3) · [SHA256SUMS](https://github.com/haitei155/engage-custom-unit-support/releases/download/v0.3/SHA256SUMS)
+
+完整 ZIP 已包含 `engage_custom_unit_support.nro` 和三个界面资源文件：`godinfo.bundle`、`unitselectroot.bundle`、`skillselectroot.bundle`，无需分别下载。这里的 Bundle 是游戏界面的资源包，包含控件及布局；NRO 负责插件逻辑，三个 Bundle 提供扩充后的特技继承界面。**仅安装或替换 NRO，无法获得 v0.3 的界面容量扩展。**
+
+1. 先按 [Cobalt](https://github.com/Raytwo/Cobalt) 的说明安装基础运行环境，然后完全退出游戏。
+2. 选择一种安装方式：将完整 ZIP 原样放入 `engage/mods/`；或将 ZIP 内的全部内容解压至 `engage/mods/engage-custom-unit-support/`，保留内部 `Data/` 目录结构。不要同时安装 ZIP 和解压副本。
+3. 升级已有安装时替换完整插件包；使用解压方式时，同时更新 NRO 和 `Data/` 中的三个 Bundle。**移除旧 `engage_dining_pair_fix.nro`**，避免新旧插件重复加载。若整合包已包含本插件，使用整合包内版本，无需另装独立副本。
+4. 完整重启游戏。模拟器使用其配置的虚拟 SD 卡目录；返回标题界面不等于完整重启。
+
+解压安装后的目录如下；直接使用 ZIP 时，这些文件位于 ZIP 内：
+
+```text
+engage/mods/engage-custom-unit-support/
+├─ engage_custom_unit_support.nro
+├─ Data/StreamingAssets/aa/Switch/fe_assets_ui/hub/godroom/prefabs/
+│  ├─ godinfo.bundle
+│  ├─ unitselectroot.bundle
+│  └─ skillselectroot.bundle
+└─ RELEASE_NOTES.md
+```
+
+Release 中的单独 NRO 只包含插件程序，不能代替完整安装包。Loading 小人的六帧 PNG 由对应人物包另行提供，不包含在上述三个界面 Bundle 中，制作与命名方法见下文。
+
+**资源许可：**这三个 Bundle 是由 Engage 2.0.0 游戏界面资源修改生成的文件，不属于本项目按 Apache-2.0 开源的代码或文档。原游戏资源的权利归原权利人；随包提供不表示获得了开源再许可。修改脚本及从自己的 RomFS 生成资源的方法见[构建说明](docs/BUILD.md)，来源与许可范围见 [THIRD_PARTY.md](THIRD_PARTY.md)。
+
 ## v0.3 新增内容
 
 ### 特技继承列表扩展
@@ -18,7 +45,7 @@ v0.3 将右侧牵绊面板扩为 **22 项，两列、11 行**，同时补足背�
 
 继承详情页预置 **30 个导航槽**，保留原生排序、左右切换和首尾循环；圆点行缩小至原来的三分之二，以容纳 30 个槽。超过 30 项时需继续扩展界面资源。仅显示实际持有的纹章士，不会额外获得戒指、技能或牵绊等级。
 
-本功能需要同时安装 NRO 和配套的三个界面 Bundle。控件在资源中预先扩好，进入页面时由游戏原生流程初始化；NRO 为导航增加越界保护。更新后须完整重启游戏。
+本功能需要完整安装包中的 NRO 和三个界面资源文件，具体文件名与目录见上方“下载与安装”。控件在资源中预先扩好，进入页面时由游戏原生流程初始化；NRO 为导航增加越界保护。更新后须完整重启游戏。
 
 ## v0.2 功能
 
@@ -60,15 +87,6 @@ Loading 模式、邀请参与者、出场队列和六帧动画继续使用原生
 
 ![修复后继续进入艾莉可的用餐评价对话](images/paired-dining-dialogue-eirika.jpg)
 
-## 下载与安装
-
-v0.3 编译版：[`engage_custom_unit_support.zip`](Releases/engage_custom_unit_support.zip)；校验值见 [SHA256SUMS](Releases/SHA256SUMS)。
-
-1. 先按 Cobalt 的说明安装基础运行环境。
-2. 将完整 ZIP 放入 `engage/mods/`，或将其内容解压至 `engage/mods/engage-custom-unit-support/`，完整重启游戏。只替换 NRO 不会扩展界面容量。
-3. **升级时移除旧 `engage_dining_pair_fix.nro`。** 新旧名称包含同一用餐钩子，不可同时运行。如果所使用的整合包已包含本插件，使用包内版本即可，无需另装独立副本。
-4. Loading PNG 留在对应人物包中；单独安装 NRO 不会增加人物素材。
-
 ## 项目改名与升级
 
 项目由 `engage-dining-pair-fix` 更名为 `engage-custom-unit-support`，v0.2 NRO 为 `engage_custom_unit_support.nro`。新版已经包含原用餐修复，旧名与新名 NRO 同时加载会造成重复钩子；升级时用新 NRO 替换旧 NRO。
@@ -79,6 +97,6 @@ v0.3 编译版：[`engage_custom_unit_support.zip`](Releases/engage_custom_unit_
 
 ## 许可与致谢
 
-本项目自行新增的代码与文档采用 [Apache License 2.0](LICENSE)。第三方依赖、上游派生代码及资源保留各自许可与权利声明；详细来源与范围见 [THIRD_PARTY.md](THIRD_PARTY.md) 和 [NOTICE](NOTICE)。
+本项目自行新增的代码与文档采用 [Apache License 2.0](LICENSE)。修改脚本 `tools/build_inheritance_ui.py` 属于本项目代码；其生成的三个游戏界面 Bundle 不适用 Apache-2.0，也不因公开下载而成为开源资源。第三方依赖、上游派生代码及资源保留各自许可与权利声明；详细来源与范围见 [THIRD_PARTY.md](THIRD_PARTY.md) 和 [NOTICE](NOTICE)。
 
 感谢 [Raytwo](https://github.com/Raytwo/Cobalt)、[skyline-rs](https://github.com/skyline-rs) 以及相关依赖贡献者。
