@@ -33,7 +33,7 @@ engage/mods/engage-custom-unit-support/
 
 The separate NRO on the Release page contains only the plugin program and does not replace the complete installation package. Six-frame Loading PNGs are supplied separately by character packages; they are not part of these three UI Bundles. See below for their format and filenames.
 
-**Resource licensing:** these three Bundles are modified Engage 2.0.0 game UI assets, not project code or documentation released under Apache-2.0. Rights to the original game assets remain with their respective holders; bundling them does not grant an open-source license to those assets. See the [build instructions](docs/BUILD.md) for the modification script and generation from your own RomFS, and [THIRD_PARTY.md](THIRD_PARTY.md) for provenance and license scope.
+UI resource rights are separate from the plugin code license; see License and Credits below.
 
 ## New in v0.3
 
@@ -97,6 +97,12 @@ See [Build instructions](docs/BUILD.md). The source includes skill-inheritance l
 
 ## License and Credits
 
-Project-owned additions and documentation use the [Apache License 2.0](LICENSE). The modification script `tools/build_inheritance_ui.py` is project code; the three game UI Bundles it generates are outside Apache-2.0 and do not become open-source assets by being publicly downloadable. Third-party dependencies, upstream-derived code and resources retain their respective license terms and notices; see [THIRD_PARTY.md](THIRD_PARTY.md) and [NOTICE](NOTICE).
+| Content | License or rights notice |
+|---|---|
+| Project-owned code, modification scripts and documentation | [Apache License 2.0](LICENSE) |
+| Three companion UI Bundles, including copies in the complete ZIP | [UI resource rights notice](resources/inheritance/NOTICE.md); excluded from the code license above |
+| Third-party dependencies and upstream-derived portions | Their respective terms; see [THIRD_PARTY.md](THIRD_PARTY.md) and [NOTICE](NOTICE) |
+
+The complete installation package contains content with different licensing scopes; the ZIP as a whole is not uniformly licensed under Apache-2.0.
 
 Thanks to [Raytwo](https://github.com/Raytwo/Cobalt), [skyline-rs](https://github.com/skyline-rs) and all relevant dependency contributors.

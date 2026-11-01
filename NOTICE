@@ -7,8 +7,7 @@ Thank you to Raytwo for Cobalt and its mod-loading foundation.
 
 See THIRD_PARTY.md for source attribution and licensing scope.
 
-Inheritance UI assets: godinfo.bundle, unitselectroot.bundle and skillselectroot.bundle
-are modified Fire Emblem Engage 2.0.0 game resources, including the copies in the
-release ZIP. They are outside the project Apache-2.0 license. Rights to the
-original game assets remain with their respective holders. This notice does not
-grant distribution permission for those assets.
+Inheritance UI assets are excluded from the project Apache-2.0 code license.
+See resources/inheritance/NOTICE.md for their separate rights notice and
+THIRD_PARTY.md for provenance. This applies to the three companion Bundles
+and copies of the same assets in the release ZIP.

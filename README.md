@@ -33,7 +33,7 @@ engage/mods/engage-custom-unit-support/
 
 Release 中的单独 NRO 只包含插件程序，不能代替完整安装包。Loading 小人的六帧 PNG 由对应人物包另行提供，不包含在上述三个界面 Bundle 中，制作与命名方法见下文。
 
-**资源许可：**这三个 Bundle 是由 Engage 2.0.0 游戏界面资源修改生成的文件，不属于本项目按 Apache-2.0 开源的代码或文档。原游戏资源的权利归原权利人；随包提供不表示获得了开源再许可。修改脚本及从自己的 RomFS 生成资源的方法见[构建说明](docs/BUILD.md)，来源与许可范围见 [THIRD_PARTY.md](THIRD_PARTY.md)。
+界面资源的许可范围与插件代码分开，见下方“许可与致谢”。
 
 ## v0.3 新增内容
 
@@ -97,6 +97,12 @@ Loading 模式、邀请参与者、出场队列和六帧动画继续使用原生
 
 ## 许可与致谢
 
-本项目自行新增的代码与文档采用 [Apache License 2.0](LICENSE)。修改脚本 `tools/build_inheritance_ui.py` 属于本项目代码；其生成的三个游戏界面 Bundle 不适用 Apache-2.0，也不因公开下载而成为开源资源。第三方依赖、上游派生代码及资源保留各自许可与权利声明；详细来源与范围见 [THIRD_PARTY.md](THIRD_PARTY.md) 和 [NOTICE](NOTICE)。
+| 内容 | 许可或权利声明 |
+|---|---|
+| 本项目自行新增的代码、修改脚本和文档 | [Apache License 2.0](LICENSE) |
+| 三个配套界面 Bundle（含完整 ZIP 内的副本） | [界面资源权利声明](resources/inheritance/NOTICE.md)，不适用上述代码许可 |
+| 第三方依赖与上游派生部分 | 保留各自许可，见 [THIRD_PARTY.md](THIRD_PARTY.md) 和 [NOTICE](NOTICE) |
+
+完整安装包包含不同许可范围的内容，不能将整个 ZIP 视为统一采用 Apache-2.0。
 
 感谢 [Raytwo](https://github.com/Raytwo/Cobalt)、[skyline-rs](https://github.com/skyline-rs) 以及相关依赖贡献者。
