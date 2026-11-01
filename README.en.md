@@ -6,7 +6,7 @@
 
 **Install [Cobalt](https://github.com/Raytwo/Cobalt) first.** Thank you to **Raytwo** for developing and maintaining Cobalt and providing the mod-loading foundation used by this project.
 
-The current binary targets Fire Emblem Engage 2.0.0 with Cobalt 1.31.0 as its compatibility baseline.
+The current binary targets Fire Emblem Engage 2.0.0 with [Cobalt 1.31.0](https://github.com/Raytwo/Cobalt) as its compatibility baseline.
 
 ## Download and Installation
 
